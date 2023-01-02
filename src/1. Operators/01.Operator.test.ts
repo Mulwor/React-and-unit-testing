@@ -1,4 +1,4 @@
-import {add, subtract, multiply, checkValue, splitIntoWords} from './01'
+import {add, subtract, multiply, checkValue, splitIntoWords, mapArrToString} from './01.Operator'
 
 let firstValue: number;
 let secondValue: number;
@@ -61,6 +61,20 @@ test("Splitting into words should be correct", () => {
     expect(result2[4]).toBe('language')
 })
 
+describe('mapArrToStrings', () => {
+    test('From number to string', () => {
+        expect(mapArrToString([1, 2 ,3])).toEqual(['1', '2', '3']);
+    })
+    test('From primitive to string', () => {
+        expect(mapArrToString([1, 2 ,3, null, undefined, 'asfasf'])).toEqual(['1', '2', '3']);
+    })
+    test('Empty array', () => {
+        expect(mapArrToString([])).toEqual([]);
+    })
+    test('Incorrect array', () => {
+        expect(mapArrToString([1,2,3])).not.toEqual([1,2,3,4]);
+    })
+})
 
 // Логические и сравнения операции
 describe('CheckValue should be correct', () => {
@@ -80,3 +94,5 @@ describe('CheckValue should be correct', () => {
         expect(checkValue(100)).toBe(true);
     })
 })
+
+
