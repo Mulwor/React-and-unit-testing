@@ -1,4 +1,4 @@
-import {add, subtract, multiply, checkValue} from './01'
+import {add, subtract, multiply, checkValue, splitIntoWords} from './01'
 
 let firstValue: number;
 let secondValue: number;
@@ -10,7 +10,7 @@ beforeEach(() => {
     thirdValue = 5;
 })
 
-
+// Арифмитические операции
 test ("Sum should be correct", () => {
     const firstResult = add (firstValue, secondValue);
     expect(firstResult).toBe(4)
@@ -20,7 +20,6 @@ test ("Sum should be correct", () => {
     const secondResult = add (firstValue, secondValue)
     expect(secondResult).toBe(103)
 })
-
 
 test ("Subtracting should be correct", () => {
     const firstResult = subtract (firstValue, secondValue);
@@ -32,8 +31,7 @@ test ("Subtracting should be correct", () => {
     expect(secondResult).toBe(100)
 })
 
-
-test ('multiply should be correct', () => {
+test ('Multiply should be correct', () => {
     const firstResult = multiply(firstValue, secondValue);
     const secondResult = multiply(secondValue, thirdValue);
 
@@ -42,8 +40,30 @@ test ('multiply should be correct', () => {
 })
 
 
+// Строковые операции
+test("Splitting into words should be correct", () => {
+    const sent1 = "Hello my friend!"
+    const sent2 = "JS - the best programming language."
 
-describe('checkValue should be correct', () => {
+    const result1 = splitIntoWords(sent1);
+    const result2 = splitIntoWords(sent2);
+
+    expect(result1.length).toBe(3)
+    expect(result1[0]).toBe('hello')
+    expect(result1[1]).toBe('my')
+    expect(result1[2]).toBe('friend')
+
+    expect(result2.length).toBe(5)
+    expect(result2[0]).toBe('js')
+    expect(result2[1]).toBe('the')
+    expect(result2[2]).toBe('best')
+    expect(result2[3]).toBe('programming')
+    expect(result2[4]).toBe('language')
+})
+
+
+// Логические и сравнения операции
+describe('CheckValue should be correct', () => {
     test('Correct value', () => {
         expect(checkValue(60)).toBe(true);
     })
