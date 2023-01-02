@@ -1,5 +1,5 @@
 import { StudentType } from "../2. Object/01.About_me";
-import { addSkill, makeStudentActive, doesStudnetLiveIn } from './Functions'
+import { addSkill, makeStudentActive, doesStudnetLiveIn } from './functions'
 
 let student: StudentType;
 
@@ -12,7 +12,7 @@ beforeEach(() => {
                     title: "Azerbaijan",
                     countryTitle: "Baku"
                 }
-            },
+        },
         technologies: [
             { id: 1, title: "HTML" },
             { id: 2, title: "CSS" },
