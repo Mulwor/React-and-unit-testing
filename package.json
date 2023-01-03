@@ -39,5 +39,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Юнит-тест (unit test), или модульный тест, — это программа, которая проверяет работу небольшой части кода.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mulwor/Unit-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mulwor/Unit-testing/issues"
+  },
+  "homepage": "https://github.com/Mulwor/Unit-testing#readme"
 }
